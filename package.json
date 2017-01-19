@@ -1,7 +1,7 @@
 {
-  "name": "responsive-email-ui-react-firebase",
+  "name": "responsive-email-dashboard",
   "version": "0.0.1",
-  "description": "Responsive Email UI using React, Redux, and Firebase",
+  "description": "Responsive Email UI using Bootstrap 4, ReactJS, Redux, NodeJS, Firebase, and Webpack 2",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline",
@@ -16,7 +16,9 @@
     "reactjs",
     "redux",
     "firebase",
-    "webpack"
+    "webpack",
+    "bootstrap",
+    "node"
   ],
   "author": "chrisVillanueva",
   "license": "GPL 3.0",
