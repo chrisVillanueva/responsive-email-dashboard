@@ -1,0 +1,149 @@
+/*
+ * Gradient Background:
+ */
+@mixin gradient-background($start, $end) {
+  background: $start;
+  background: -webkit-linear-gradient(left top, $start, $end);
+  background: -o-linear-gradient(bottom right, $start, $end);
+  background: -moz-linear-gradient(bottom right, $start, $end);
+  background: linear-gradient(to bottom right, $start, $end);
+}
+
+/*
+ * Border Radius
+ */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-bottom-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-bottom-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  background-clip: padding-box;
+}
+
+/*
+ * Flex
+ */
+
+@mixin flex-vcenter($height) {
+  @extend .flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+  height: $height;
+}
+
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+  flex-basis: $width;
+}
+
+@mixin align-items($position) {
+  -webkit-align-items: $position;
+  align-items: $position;
+}
+
+@mixin justify-content($position) {
+  -webkit-justify-content: $position;
+  justify-content: $position;
+}
+
+@mixin flex-center($position) {
+  @extend .flex;
+  @include justify-content($center);
+  @include align-items($center);
+}
+
+/*
+ * Hide animation
+ */
+@mixin hide {
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+@mixin show {
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/*
+ * Ellipsis
+ */
+@mixin ellipsis($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+ * Notifications
+ */
+@mixin notification($background) {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  color: white !important;
+  background: $background;
+  border-radius: 3px;
+  padding: 15px;
+  z-index: 99999;
+}
+

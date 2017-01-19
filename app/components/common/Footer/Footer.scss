@@ -1,0 +1,22 @@
+/* footer */
+
+footer {
+  border-top: 2px solid $border-color;
+  padding:1.75rem 1rem 0rem 8rem;
+
+  p {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin: 0 0.2rem;
+      color: $blue-global;
+
+      &:hover {
+        color: $blue-global;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

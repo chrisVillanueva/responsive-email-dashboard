@@ -1,0 +1,153 @@
+$APP: dashboard-email;
+
+/*
+ * Colors
+ */
+$black: #000000;
+$blue: #0065B0;
+$blue-default: #002960;
+$blue-bright: #3F52B2;
+$blue-global: #0065BD;
+$blue-greenish: #05AEEF;
+$blue-grey: #7D9AAA;
+$blue-primary: #0467BE;
+$blue-secondary: #9DDFF8;
+$darkBrightBlue: #004c8e;
+$cyan: #00ADEF;
+$green: #7BB50C;
+$grey-border: #E5E5E5; // for use on borders, pipes and dividers
+$grey-xlight: #EEEEEE;
+$grey-light: #F1F1F1; // for use on main background color
+$grey-dark: #999999; // for use on text
+$grey-medium: #666666; // for use on text
+$grey-darker: #333333; // for use on text
+$grey-open: #e1e5e9;
+$grey-disabled: #CFD1CF;
+$grey-border-input: #A4A3A3;
+$grey-row-table: #F7F7F7;
+$grey-bold: #555555;
+$lightSteelBlue: #94b6d6;
+$pink: #EC008C;
+$purple: #66307C;
+$red: #CD202C;
+$turquoise-light: #4FE3C1;
+$turquoise: #009aa6;
+$turquoise-dark: #006983;
+$white: #FFFFFF;
+$yellow: #F7E102;
+
+
+$border-color: #DFDFDF;
+$default-bg: $white;
+$light-grey-bg: #d1d1d1;
+$lighter-grey-bg: #f1f5f9;
+$divider-color: #E5E5E5;
+$open-state-dark: #233445;
+$open-state-medium: #FE9A2E;
+$open-state-bright: #34b3e4;
+$header-gray: #676767;
+$hover-bar: #c3c3c3;
+$navigation-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1);
+$thick-border-color: #00EBC1;
+$warning-color: #DFC555;
+$list-group-item-active-bg: #e1e5e9;
+$list-group-item-active-hover-bg: #428bca;
+
+$success-color: #5cb85c!important;
+$warning-color: #f0ad4e !important;
+$danger-color: #d9534f!important;
+
+/*
+ * Padding / Margin
+ */
+$padding: 12px;
+$large-padding: $padding * 2;
+$extra-large-padding: $padding * 3;
+$margin: 12px;
+$large-margin: $margin * 2;
+
+/*
+ * Font
+ */
+$main-font: Helvetica, Arial, sans-serif;
+$size17: 1.7rem;
+$sortable-h2: 2rem;
+$sortable-h3: 1.6rem;
+$header-font-size: 2.4rem;
+$button-font-size: $size17;
+$icon-font-size: $size17;
+$icon-font-size-large: 2rem;
+$small-font-size: 1rem;
+$small-text-size: 1rem;
+$larger-text: $size17;
+$larger-text-sub-header: 2rem;
+$bold: 600;
+$text-color: $grey-darker;
+$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-weight-base: 400 !default;
+$font-weight-bold: 600 !default;
+
+$font-size-base: 14px !default;
+$font-size-small: 12px !default;
+$font-size-lg: 18px !default;
+$font-size-h1: ceil($font-size-base * 4) !default; // 56px
+$font-size-h2: floor($font-size-base * 3) !default; // 42px
+$font-size-h3: floor($font-size-base * 2) !default; // 28px
+$font-size-h4: floor($font-size-base * 1.6) !default; // 22px
+$font-size-h5: floor($font-size-base * 1.3) !default; // 18px
+$font-size-h6: floor($font-size-base * 1.2) !default; // 16px
+
+
+/*
+ * Buttons
+ */
+$button-default-color: $white !default;
+$button-default-bg: $blue-global !default;
+$button-default-border: transparent !default;
+
+$button-default-hover-color: $white !default;
+$button-default-hover-bg: $black !default;
+$button-default-hover-border: transparent !default;
+
+$button-primary-color: $white !default;
+$button-primary-bg: $blue-global !default;
+$button-primary-border: transparent !default;
+
+$button-primary-hover-color: $white !default;
+$button-primary-hover-bg: $black !default;
+$button-primary-hover-border: transparent !default;
+
+$button-secondary-color: $black !default;
+$button-secondary-bg: transparent !default;
+$button-secondary-border: $grey-border !default;
+
+$button-secondary-hover-color: $black !default;
+$button-secondary-hover-bg: transparent !default;
+$button-secondary-hover-border: $black !default;
+
+$button-disabled-color: $grey-dark !default;
+$button-disabled-bg: $white !default;
+$button-disabled-border: $grey-border !default;
+
+/*
+ * Headings
+ */
+$headings-font-family: inherit !default;
+$headings-font-weight: $font-weight-bold !default;
+$headings-text-color: $black !default;
+
+/*
+ * Line Height
+ */
+$line-height-base: 1.428571429 !default; // 20/14
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$padding-sm: 24px !default;
+$padding-lg: 32px !default;
+$padding-xl: 40px !default;
+
+// path to assets
+$path--rel: '../images/';
+

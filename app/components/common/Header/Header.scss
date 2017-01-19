@@ -1,0 +1,327 @@
+/* header */
+
+header {
+  border: 1px solid $grey-border;
+  background-color: $white;
+  box-shadow: $navigation-box-shadow;
+
+  a, a:focus, a:visited,
+  i {
+    color: $grey-bold;
+  }
+
+  > ul,
+  > button {
+    height: 100%;
+  }
+
+  button {
+    i {
+      color: $blue-global;
+    }
+  }
+
+  &.navbar {
+    padding: 0;
+    height: 4rem;
+
+    ul {
+      .dropdown {
+        @extend .flex;
+        @include justify-content(center);
+        @include align-items(center);
+        height: 100%;
+
+        > a {
+          @extend .flex;
+          @include justify-content(center);
+          @include align-items(center);
+          height: 4rem;
+          padding: 0 0.75rem;
+
+          &:hover {
+            color: $blue-global;
+            background-color: $grey-light;
+          }
+
+          .avatar {
+            margin: 0 0.75rem 0 1rem;
+          }
+        }
+
+        &.open {
+
+          > .dropdown-toggle {
+            background-color: $grey-open;
+            box-shadow: inset 0 5px 0 $open-state-bright;
+
+            /*possible mixin*/
+            &:after {
+              border-bottom: .3em solid;
+              border-right: .3em solid transparent;
+              border-left: .3em solid transparent;
+              border-top: none;
+            }
+          }
+        }
+
+        .dropdown-menu {
+          right: -2px;
+          left: auto;
+          top: 99%;
+        }
+
+      }
+    }
+  }
+
+  .navbar-nav {
+    @extend .flex;
+    @include justify-content(flex-start);
+    @include align-items(center);
+    margin-left: 8rem;
+
+    .notifications-wrapper {
+      @include flex-basis(3rem);
+
+      .notifications-panel {
+        margin-right: 2rem;
+        text-align: center;
+
+        a {
+          position: relative;
+          display: inline-block;
+          height: 1.8em;
+
+          &:after {
+            display: none;
+          }
+
+          &:hover {
+            background-color: inherit;
+          }
+
+          i {
+            font-size: 2em;
+          }
+
+          b {
+            position: absolute;
+            top: -0.4rem;
+            right: 0.5rem;
+          }
+        }
+
+        .dropdown-menu {
+          min-width: 20rem;
+          top: 155%;
+          left: 0;
+          right: auto;
+          @include border-bottom-radius(.3rem);
+        }
+
+        &.open {
+          .dropdown-toggle {
+            background-color: transparent;
+            box-shadow: none;
+
+            i {
+              color: $open-state-bright;
+            }
+
+            b {
+              color: $grey-bold;
+              background-color: $open-state-bright !important;
+            }
+
+          }
+        }
+
+        .panel-heading,
+        .panel-footer {
+          border-bottom: 1px solid $border-color;
+          background: $grey-xlight;
+          color: $grey-bold;
+        }
+
+        .panel-heading {
+          padding: 10px 15px;
+        }
+
+        .panel-footer {
+          padding: 0;
+          border-top: none;
+
+          > div {
+            background: $grey-xlight;
+
+            &:first-child {
+              @include border-bottom-left-radius(.3rem);
+            }
+
+            &:last-child {
+              @include border-bottom-right-radius(.3rem);
+            }
+
+            a {
+              @extend .flex;
+              @include justify-content(flex-start);
+              @include align-items(center);
+              color: $grey-bold;
+              font-size: 0.8rem;
+              padding:1rem 0;
+
+              &:hover {
+                color: $blue-global;
+                background-color: $grey-light;
+
+                i {
+                  color: $blue-global;
+                }
+              }
+            }
+
+            i {
+              font-size: 150%;
+            }
+          }
+        }
+
+        .list-group {
+
+          .list-group-item {
+            padding: 0;
+            border-radius: 0;
+
+            a {
+              height: auto;
+              padding: .5rem 0.75rem;
+              display: block;
+              border: none;
+
+              &:hover {
+               background-color: #f1f5f9;
+
+                .media-body {
+
+                  span {
+                    &:first-child {
+                      color: $blue-global;
+                    }
+                  }
+                }
+
+              }
+
+              i {
+                font-size: 1.8rem;
+                color: #a5b6c7;
+              }
+
+              .thumb-small {
+                width: auto;
+                margin-right: 0.7rem;
+              }
+
+              .media-body {
+                span {
+                  display: block;
+
+                  &:first-child {
+                    font-size: 0.9rem;
+                    line-height: 1rem;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    .post-wrapper {
+      @include flex-basis(5.5rem);
+
+      &.nav-item {
+        margin-left: 0;
+
+        button {
+          position: relative;
+          top: -1px;
+          background-color: $button-default-bg;
+          border-color: $button-default-border;
+
+          &:hover {
+            background-color: $darkBrightBlue;
+          }
+
+          i {
+            color: $white;
+          }
+
+          span {
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+
+    .search-wrapper {
+      @include flex-basis(15rem);
+
+      form {
+        @extend .flex;
+        @include justify-content(flex-start);
+        position: relative;
+
+        input {
+          height: 2.2rem;
+          border-top: 1px solid $grey-border;
+          border-right:  none;
+          border-bottom: 1px solid $grey-border;
+          border-left: 1px solid $grey-border;
+          border-radius: 0;
+        }
+
+        button {
+          position: relative;
+          top: -1px;
+          height: 2.3rem;
+          color: $white;
+          background-color: $button-default-bg;
+          border: 1px solid $grey-border;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $darkBrightBlue;
+          }
+
+          i {
+            color: $white;
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 575px) {
+  .dropdown-toggle {
+    &:after {
+      display: none !important;
+    }
+  }
+}
+
+/*
+  notes:
+
+  @extend .flex;
+  @include flex-basis(6%);
+  @include justify-content(flex-start);
+  @include align-items(center);
+*/
+

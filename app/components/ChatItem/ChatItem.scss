@@ -1,0 +1,48 @@
+/* ChatItem..scss */
+
+.contact-list {
+
+  .list-group {
+    .list-group-item {
+      padding: .75rem;
+
+      &:first-child,
+      &:last-child  {
+        border-radius: 0;
+      }
+
+      .text-success,
+      .text-warning,
+      .text-danger {
+        &:hover {
+          color:#66512c !important;
+        }
+      }
+
+      .media-body {
+        padding: 0 0.5rem;
+
+        a {
+          display: block;
+          color: $grey-bold;
+
+          &:hover {
+            color: $blue-global;
+          }
+        }
+
+        div > span {
+          display: inline-block;
+          color: $grey-darker;
+          font-size: 0.9rem;
+          font-weight: 200;
+          line-height: 1rem;
+          margin: 0.3rem 0;
+        }
+      }
+    }
+  }
+}
+
+
+
